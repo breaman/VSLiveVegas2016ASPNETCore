@@ -1,0 +1,42 @@
+Create empty web application
+	- wwwroot
+	- startup.cs (the new global.asax.cs)
+		- ConfigureServices
+			- "Add"s services that can be used later
+			- Inserts dependency injection
+		- Configure
+			- adds middleware or functions to "Use" in the application
+	- project.json
+	- Difference between References and Dependencies
+
+Show modularity of ASP.NET
+	- add an index.html file to wwwroot and show it doesn't come up, need to add middleware of UseDefaultFiles() and UseStaticFiles()
+
+Add MVC
+	- Things that already existed
+		- Home/Shared/_ViewStart
+	- Things that are new
+		- _ViewImports, replaces web.config file for importing namespaces
+		- TagHelpers
+
+Add "Dependencies" using npm - can also use Bower but not really needed anymore
+	- use gulp for asset manipulation
+		- transpile typescript
+		- bundling and minification
+
+Add domain project
+
+Add EntityFramework
+	- discuss option around EntityFramework
+		- can target SQL Server, SQLite, and InMemory out of the box, third party already created for PostgreSQL
+	- this will be a good time to add configuration
+	- show app.UseDatabaseErrorPage()
+	- Migrations
+		- dnx ef migrations add "" -c? -p <CaseSensitive>
+		- dnx ef database update (or )
+	- When discussing Configuration, this would be a good time to bring up hosting.json and launchSettings.json
+
+Add Logging
+	- ILoggerFactory (MinimumLevel, .AddConsole(), .AddDebug())
+	- show how to modify web.config to write console logging to text file
+	- show how to integrated NLog
