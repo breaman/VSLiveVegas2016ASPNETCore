@@ -12,17 +12,19 @@ Create empty web application
 Show modularity of ASP.NET
 	- add an index.html file to wwwroot and show it doesn't come up, need to add middleware of UseDefaultFiles() and UseStaticFiles()
 
+Add "Dependencies" using npm - can also use Bower but not really needed anymore
+	- add package.json (NPM Configuration File)
+	- add gulpfile.js (Gulp Configuration File)
+	- use gulp for asset manipulation
+		- transpile typescript
+		- bundling and minification
+
 Add MVC
 	- Things that already existed
 		- Home/Shared/_ViewStart
 	- Things that are new
 		- _ViewImports, replaces web.config file for importing namespaces
 		- TagHelpers
-
-Add "Dependencies" using npm - can also use Bower but not really needed anymore
-	- use gulp for asset manipulation
-		- transpile typescript
-		- bundling and minification
 
 Add domain project
 
